@@ -10,7 +10,8 @@ Welcome to Torngat cluster documentation's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   about
+   howdoi/index
 
 Indices and tables
 ==================
