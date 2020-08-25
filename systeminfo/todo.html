@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>To Do &mdash; Torngat cluster  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Torngat cluster
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howdoi/index.html">How do I …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/getatorngataccount.html">… get a Torngat account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/transferdatatoacenet.html#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/transferdatatoacenet.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html">… pick a parallel environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html#pe-configuration">PE Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html#torngat-pes">Torngat PEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/matlab.html">… run MATLAB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/matlab.html#accessing-a-matlab-node">Accessing a MATLAB node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/matlab.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/matlab.html#access-instructions">Access instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/matlab.html#parallel-computing-in-matlab">Parallel computing in MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/submit.html">… submit a job on Torngat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/useimpi.html">… run Intel MPI programs on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/1selectmpi.html">Select MPI version</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/1selectmpi.html#use-the-mpi-selector-facility-to-set-the-mpi-version-to-intel-mpi">Use the mpi selector facility to set the MPI version to Intel MPI.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/2compile.html">Use the mpi compiler to compile the MPI program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/2compile.html#see-sample-program">See Sample program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-c-program">Compile C program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-c-c-program">Compile C/C++ program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-fortran-program">Compile Fortran program:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../howdoi/impi/2compile.html#switches-on-the-command-line-are-passed-to-the-underlying-compiler">Switches on the command line are passed to the underlying compiler.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/3submit.html">To run a program in the Intel MPI environment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/3submit.html#create-a-script-file-describing-the-job">Create a script file describing the job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/4monitor.html">Monitoring Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-your-jobs">To show your jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-all-jobs">To show all jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-all-queues">To show all queues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-delete-abort-a-job">To delete (abort) a job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/5output.html">Get the output from the completed job.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/6sample.html">Sample Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/e3d/e3d.html">… run E3d on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/e3d/e3d.html#how-to-run-e3d-on-torngat">How to run E3d on Torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/unusual.html">… run unusual code on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#the-code">“The Code”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#how-to-run-it-on-torngat">How to run it on torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Torngat cluster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>To Do</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/systeminfo/todo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="to-do">
+<h1>To Do<a class="headerlink" href="#to-do" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 2%" />
+<col style="width: 11%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Created</p></th>
+<th class="head"><p>State</p></th>
+<th class="head"><p>Task</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2012-06-12 10:37</p></td>
+<td><p>45%</p></td>
+<td><p>Email</p></td>
+<td><ul class="simple">
+<li><p>avalon emails work</p></li>
+<li><p>relay from torngat (or compute nodes) does not</p></li>
+<li><p>11:52, 10 May 2012 (NDT) Emailed Allan to see if he can help debug mail</p></li>
+<li><p>10:59, 16 May 2012 (NDT) worked with Allan, needed to change destination for local mails as the alias file doesn’t get used until delivery, fixed logwatch. Root is exempt from rules, needed to remove the exemption. Mail getting tagged as SPAM by NOTFROMMUN rule, Allan added torngat (all of creait really) to whitelist for mail sending</p></li>
+<li><p>2012-06-12 11:48 logwatch sent from “logwatch&#64;….” is still being marked as spam</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2013-07-3 15:26</p></td>
+<td><p>0%</p></td>
+<td><p>Implement tight integration for MPI and SGE</p></td>
+<td><ul>
+<li><p>maglua is the biggest offender</p></li>
+<li><p>Jason has code that recreates the problem</p></li>
+<li><p>MPI problem?</p></li>
+<li><p>The jobs run on ace-net why not on torngat, differential troubleshoot</p></li>
+<li><p>script to clean up errant processes</p></li>
+<li><p>SGE post script</p></li>
+<li><p>for now users can run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i in <span class="sb">`</span>seq -f <span class="s1">&#39;%02g&#39;</span> <span class="m">1</span> <span class="m">42</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ssh cn<span class="nv">$i</span> <span class="s1">&#39;pkill -u $USER&#39;</span> <span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p>if they currently have no SGE jobs running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i in <span class="sb">`</span>ps --no-headers -ely <span class="p">|</span>awk <span class="s1">&#39;{ if($2 &gt; 1024) print $3 }&#39;</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> <span class="nb">kill</span> <span class="nv">$i</span> <span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+</li>
+<li><p>2012-05-17 13:22 enhancing <em>runnodes</em> and converting to python to eliminate need to escape characters that BASH requires</p></li>
+<li><p>2012-06-22 16:33 Not sure if this can be fixed easily, continuing offender is maglua</p></li>
+<li><p>2013-07-3 15:26 previously clean up processes on compute nodes. A parallel environment that has tight integration with MPI should fix this. Check <a class="reference external" href="https://wiki.duke.edu/display/SCSC/Intel+MPI+and+SGE">https://wiki.duke.edu/display/SCSC/Intel+MPI+and+SGE</a> and <a class="reference external" href="http://software.intel.com/en-us/articles/integrating-intel-mpi-sge/">http://software.intel.com/en-us/articles/integrating-intel-mpi-sge/</a> for information</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>2013-07-3 15:26</p></td>
+<td><p>20%</p></td>
+<td><p>Check UPS shutdown of storage (HP)</p></td>
+<td><ul class="simple">
+<li><p>Answer: We’re not sure. Keith Hoyles would like to come in and check. <em>Who should he contact?</em></p></li>
+<li><p>2012-09-19 14:00 The UPS is not connected to either head node. Need to get this setup and proper shutdown of systems setup.</p></li>
+<li><p>2013-07-3 15:26 The UPUS is connected, and the software installed. There are communication issues between the UPS and node. Check the virtual serial port used for iLo, it may be the problem.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2013-07-3 15:26</p></td>
+<td><p>0%</p></td>
+<td><p>Firmware updates of disks and MSA60</p></td>
+<td><ul class="simple">
+<li><p>Check if there is an easy way to update firmware for the disks and chassis of the MSA60 as well as the P812 controller. Note: System Update Manager (SUM) was discussed during call (Peter)</p></li>
+<li><p>Answer – The MSA60 and P812 can be updated in a variety of ways. The most common way is through SUM or SIM (Systems Insight Manager) There is also the possibility to download the firmware individually for most components and run the upgrade manually from commandline. HPSUM would be the preferred method.</p></li>
+<li><p>Updates listed as critical fix <a class="reference external" href="http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03468137&amp;jumpid=em_alerts_us-us_Mar13_xbu_all_all_2031514_142775_bladesystemproliantserversstorageoptionsandaccessories_critical_006_0">http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03468137&amp;jumpid=em_alerts_us-us_Mar13_xbu_all_all_2031514_142775_bladesystemproliantserversstorageoptionsandaccessories_critical_006_0</a></p></li>
+<li><p>2013-07-3 15:26 Disk firmware update listed as critical for the 600G disks, with a risk of incorrect data reads. Schedule downtime for this update.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>2013-07-3 15:26</p></td>
+<td><p>0%</p></td>
+<td><p>SGE Projects Setup</p></td>
+<td><ul class="simple">
+<li><p>A way to group users and allocate resources</p></li>
+<li><p>Read more about project/queue interaction before implementing</p></li>
+<li><p>Will be technically challenging to setup.</p></li>
+<li><p>2013-07-3 15:26 On hold until management group meets.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2013-08-1 10:43</p></td>
+<td><p>100%</p></td>
+<td><p>Run Linpack on current compute nodes</p></td>
+<td><ul class="simple">
+<li><p>Compile and run linpack in preparation for new nodes</p></li>
+<li><p>2014-01-15 08:37 Completed run before arrival of new nodes. Was able to get 4.99TFLOPS, which matches the original specification for torngat.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>2014-01-15 08:47</p></td>
+<td><p>0%</p></td>
+<td><p>Make all iLo static IP</p></td>
+<td><ul class="simple">
+<li><p>2014-01-15 08:47 New nodes iLo are DHCP dependant, so management is not possible when DHCP server does not respond. Old nodes iLo are independent. Switch to static IP for iLo will allow for management without the need of a system(glauce) being up.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Memorial University of Newfoundland
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

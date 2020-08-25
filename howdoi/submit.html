@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>… submit a job on Torngat &mdash; Torngat cluster  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="… run Intel MPI programs on Torngat" href="useimpi.html" />
+    <link rel="prev" title="… run MATLAB" href="matlab.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Torngat cluster
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How do I …</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getatorngataccount.html">… get a Torngat account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transferdatatoacenet.html#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transferdatatoacenet.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pickaparallelenvironment.html">… pick a parallel environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pickaparallelenvironment.html#pe-configuration">PE Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pickaparallelenvironment.html#torngat-pes">Torngat PEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matlab.html">… run MATLAB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html#accessing-a-matlab-node">Accessing a MATLAB node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matlab.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab.html#access-instructions">Access instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html#parallel-computing-in-matlab">Parallel computing in MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">… submit a job on Torngat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="useimpi.html">… run Intel MPI programs on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="impi/1selectmpi.html">Select MPI version</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/1selectmpi.html#use-the-mpi-selector-facility-to-set-the-mpi-version-to-intel-mpi">Use the mpi selector facility to set the MPI version to Intel MPI.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/2compile.html">Use the mpi compiler to compile the MPI program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/2compile.html#see-sample-program">See Sample program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-c-program">Compile C program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-c-c-program">Compile C/C++ program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-fortran-program">Compile Fortran program:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="impi/2compile.html#switches-on-the-command-line-are-passed-to-the-underlying-compiler">Switches on the command line are passed to the underlying compiler.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/3submit.html">To run a program in the Intel MPI environment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/3submit.html#create-a-script-file-describing-the-job">Create a script file describing the job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/4monitor.html">Monitoring Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-your-jobs">To show your jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-all-jobs">To show all jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-all-queues">To show all queues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-delete-abort-a-job">To delete (abort) a job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/5output.html">Get the output from the completed job.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impi/6sample.html">Sample Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="e3d/e3d.html">… run E3d on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="e3d/e3d.html#how-to-run-e3d-on-torngat">How to run E3d on Torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unusual.html">… run unusual code on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#the-code">“The Code”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#how-to-run-it-on-torngat">How to run it on torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Torngat cluster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">How do I …</a> &raquo;</li>
+        
+      <li>… submit a job on Torngat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howdoi/submit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="submit-a-job-on-torngat">
+<h1>… submit a job on Torngat<a class="headerlink" href="#submit-a-job-on-torngat" title="Permalink to this headline">¶</a></h1>
+<p>When submitting a job the command qsub is used. The parameters for the
+job can be contained in a submisison script file, or can be included on
+the qsub command line. For additional docs, please see the
+<a class="reference external" href="http://www.ace-net.ca/wiki/SGE#Job_parameters_acenet_information">acenet information</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a>, or check out the
+<a class="reference external" href="http://docs.oracle.com/cd/E24901_01/doc.62/e21976/toc.htm_official_documentation">official documentation</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a>. Keep in mind the official docs are for a newer version
+than torngat currently supports.</p>
+<p>Here are common parameters:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-c<var>wd</var></span></kbd></dt>
+<dd><p>This will maintain the Current Working Directory. In other words,
+files without a full path specification will be taken from the
+location the job was started</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-cwd</span></code></p>
+</dd>
+<dt><kbd><span class="option">-N</span></kbd></dt>
+<dd><p>Gives the job a defined name. If this parameter is not given, the
+job name will be the submission script name.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-N</span> <span class="pre">my-job</span></code></p>
+</dd>
+<dt><kbd><span class="option">-p<var>e</var></span></kbd></dt>
+<dd><p>Tells the scheduler which parallel environment to use, see
+documentation on <a class="reference internal" href="pickaparallelenvironment.html#pe-configuration"><span class="std std-ref">PE Configuration</span></a> for more information.
+In particular, when using impi, additional glue is
+currently required.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-pe</span> <span class="pre">impi</span> <span class="pre">1</span></code></p>
+<ul class="simple">
+<li><p>When using the environment <code class="docutils literal notranslate"><span class="pre">impi</span></code> a machine file must be
+generated, please see</p></li>
+</ul>
+</dd>
+<dt><kbd><span class="option">-q</span></kbd></dt>
+<dd><p>This has become important as there are now multiple queues on
+torngat, just as on acenet. The general queue to use is sl6.q. This
+queue only has minimal resources. A better queue would be the group
+queue. This can be determined by using the command “id” and looking
+for your supervisor’s group name. Queue names can also be obtained
+by running the command “qstat -g c”, please be sure to only use the
+queue to which you are entitled.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-q</span> <span class="pre">sl6.q</span></code></p>
+</dd>
+<dt><kbd><span class="option">-j <var>y</var></span></kbd></dt>
+<dd><p>Joins stdout and stderr. If set to n, the default, then a separate
+file will be used for each output stream.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-j</span> <span class="pre">y</span></code></p>
+</dd>
+<dt><kbd><span class="option">-o</span></kbd></dt>
+<dd><p>directs output into the named file. A best practice is to use the
+JOB_ID variable to prevent merging of output from different jobs.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-o</span> <span class="pre">$JOB_ID.out</span></code></p>
+</dd>
+<dt><kbd><span class="option">-V</span></kbd></dt>
+<dd><p>(Capital V), keeps any customized environment settings.</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-V</span></code></p>
+</dd>
+<dt><kbd><span class="option">-M</span></kbd></dt>
+<dd><p>Send email about the job to this address</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-M</span> <span class="pre">cagg-systems&#64;mun.ca</span></code></p>
+</dd>
+<dt><kbd><span class="option">-m <var>&lt;b|e|a|s|n&gt;</var></span></kbd></dt>
+<dd><p>Choose when to send mail. For example to send mail when the job
+starts and ends</p>
+<p>Script example:
+<code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-m</span> <span class="pre">be</span></code></p>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="http://www.ace-net.ca/wiki/SGE#Job_parameters_acenet_information">http://www.ace-net.ca/wiki/SGE#Job_parameters_acenet_information</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="http://docs.oracle.com/cd/E24901_01/doc.62/e21976/toc.htm_official_documentation">http://docs.oracle.com/cd/E24901_01/doc.62/e21976/toc.htm_official_documentation</a></p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="useimpi.html" class="btn btn-neutral float-right" title="… run Intel MPI programs on Torngat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matlab.html" class="btn btn-neutral float-left" title="… run MATLAB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Memorial University of Newfoundland
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

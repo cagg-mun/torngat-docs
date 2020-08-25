@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Power Cycle Torngat &mdash; Torngat cluster  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Torngat cluster
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howdoi/index.html">How do I …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/getatorngataccount.html">… get a Torngat account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/transferdatatoacenet.html#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/transferdatatoacenet.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html">… pick a parallel environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html#pe-configuration">PE Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/pickaparallelenvironment.html#torngat-pes">Torngat PEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/matlab.html">… run MATLAB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/matlab.html#accessing-a-matlab-node">Accessing a MATLAB node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/matlab.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/matlab.html#access-instructions">Access instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/matlab.html#parallel-computing-in-matlab">Parallel computing in MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/submit.html">… submit a job on Torngat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/useimpi.html">… run Intel MPI programs on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/1selectmpi.html">Select MPI version</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/1selectmpi.html#use-the-mpi-selector-facility-to-set-the-mpi-version-to-intel-mpi">Use the mpi selector facility to set the MPI version to Intel MPI.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/2compile.html">Use the mpi compiler to compile the MPI program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/2compile.html#see-sample-program">See Sample program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-c-program">Compile C program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-c-c-program">Compile C/C++ program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../howdoi/impi/2compile.html#compile-fortran-program">Compile Fortran program:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../howdoi/impi/2compile.html#switches-on-the-command-line-are-passed-to-the-underlying-compiler">Switches on the command line are passed to the underlying compiler.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/3submit.html">To run a program in the Intel MPI environment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/3submit.html#create-a-script-file-describing-the-job">Create a script file describing the job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/4monitor.html">Monitoring Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-your-jobs">To show your jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-all-jobs">To show all jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-show-all-queues">To show all queues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../howdoi/impi/4monitor.html#to-delete-abort-a-job">To delete (abort) a job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/5output.html">Get the output from the completed job.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/6sample.html">Sample Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/e3d/e3d.html">… run E3d on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/e3d/e3d.html#how-to-run-e3d-on-torngat">How to run E3d on Torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/unusual.html">… run unusual code on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#the-code">“The Code”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../howdoi/unusual.html#how-to-run-it-on-torngat">How to run it on torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../howdoi/impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Torngat cluster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Power Cycle Torngat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/systeminfo/powercycle.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="power-cycle-torngat">
+<h1>Power Cycle Torngat<a class="headerlink" href="#power-cycle-torngat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="shutdown">
+<h2>Shutdown<a class="headerlink" href="#shutdown" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Login to glauce (as yourself) and sudo to root</p></li>
+<li><p>Setup the ansible environment, the easiest way might be to go through
+the history (up-arrow) to find the commands</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/ansible;</span> <span class="pre">.</span> <span class="pre">hacking/env-setup;</span> <span class="pre">export</span></code>
+<code class="docutils literal notranslate"><span class="pre">ANSIBLE_HOSTS=~/clusterhosts;</span> <span class="pre">export</span></code>
+<code class="docutils literal notranslate"><span class="pre">ANSIBLE_HOST_KEY_CHECKING=False</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Shutdown the compute nodes.</p>
+<ol class="arabic">
+<li><p>To power the machines off elegantly run:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'cn'</span> <span class="pre">-a</span> <span class="pre">poweroff</span></code>
+This command will run in parallel so the command will return
+quickly.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Wait 5 minutes for the systems actually power off</strong></p></li>
+<li><p>Run the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'ilo'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">power</span></code>
+<code class="docutils literal notranslate"><span class="pre">|grep</span> <span class="pre">-E</span> <span class="pre">'(localdomain|server</span> <span class="pre">power|On)'</span></code>
+The command will simply show the power status for the nodes
+using the management interface. The last word of the status
+line should be “Off”. With any luck, any systems that are on,
+will have the word “On” in green . Check for any nodes that
+show power “On”, skip down below for instructions on powering
+them off.</p>
+</div></blockquote>
+</li>
+</ol>
+</li>
+<li><p>Power off the head nodes.</p>
+<ol class="arabic">
+<li><p>First power off the secondary head node, which is actually called
+torngat. To do that use the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'hn02*;'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">poweroff</span></code></p>
+</div></blockquote>
+</li>
+<li><p><strong>*Wait 5 minutes for the system to power off*</strong></p></li>
+<li><p>Run the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'mphn02*;'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">power</span></code>
+The command should return that the server power is off. If not
+wait another 5 minutes and check again. If the system is still
+not off, use the instructions for forcing power off on a
+compute node.</p>
+</div></blockquote>
+</li>
+<li><p>Now power off the primary head node, avalon. Use the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'hn01*;'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">poweroff</span></code></p>
+</div></blockquote>
+</li>
+<li><p><strong>*Wait 5 minutes for the system to power off*</strong></p></li>
+<li><p>Run the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'mphn01*;'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">power</span></code>
+The command should return that the server power is off. If not
+wait another 5 minutes and check again. If the system is still
+not off, use the instructions for forcing power off on a
+compute node.</p>
+</div></blockquote>
+</li>
+</ol>
+</li>
+<li><p>Lastly glauce can be powered off (the system used from steps 1-4),
+just run the command “poweroff”</p></li>
+<li><p>Power off the UPS, press the power switch on the front.</p></li>
+<li><p>Turn off the 8 PDU master switches. This action will shutdown the
+network devices, compute node chassis and storage chassis.</p></li>
+<li><p>Finished</p></li>
+</ol>
+</div>
+<div class="section" id="startup">
+<h2>Startup<a class="headerlink" href="#startup" title="Permalink to this headline">¶</a></h2>
+<p>The startup is essentially the reverse of shutdown, with more physical
+presense needed.</p>
+<ol class="arabic">
+<li><p>Power on the PDU devices (8 of them). The network, storage chassis
+and compute node chassis will power up.</p></li>
+<li><p>Power on the UPS.</p></li>
+<li><p><strong>Wait for 10 minutes for the switches and chassis to settle.</strong></p></li>
+<li><p>Power on glauce (don’t need to wait, continue on)</p></li>
+<li><p>Power on avalon, the storage management and primary head node.</p></li>
+<li><p><strong>WAIT for the console in the datacentre to show the system login screen.</strong></p></li>
+<li><p>Power on torngat, there is no console for this, so …</p></li>
+<li><p><strong>Wait 5 minutes</strong></p></li>
+<li><p>Log into glauce (it should be up by now) as yourself and sudo to
+root.</p></li>
+<li><p>Setup the ansible environment as per step 2 of shutdown.</p></li>
+<li><p>Power on the compute nodes by running the command:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'ilo'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">'power</span> <span class="pre">on'</span></code></p>
+</div></blockquote>
+</li>
+<li><p><strong>Wait 10 minutes for the systems to settle</strong></p></li>
+<li><p>Now validate that the systems are accessible by running:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'cn'</span> <span class="pre">-m</span> <span class="pre">ping</span></code>
+This runs in parallel so the results may be out of order. Check
+that each of the 42 nodes responds with a success and a pong. The
+node name should show success, and the ping should have a
+corresponding pong. For nodes that are not up, each one must be
+dealt with individually, see troubleshooting</p>
+</div></blockquote>
+</li>
+</ol>
+<p>#. Craig Squires will check that the queuing is functioning correctly
+#.</p>
+<blockquote>
+<div></div></blockquote>
+<ol class="arabic">
+<li></li>
+</ol>
+<p>Finished</p>
+<p>For systems that auto power up</p>
+<p>If a system starts up automatically, there are 2 choices.</p>
+<ol class="arabic simple">
+<li><p>Shut the system down before beginning startup procedures. The shut
+down can be done with a long press of the power button, or the remote
+management, as per shutdown steps (glauce would need to be on)</p></li>
+<li><p>Proceed with the startup, and reset/reboot the node after all power
+is up (dealing with troublesome nodes)</p></li>
+</ol>
+</div>
+<div class="section" id="troublesome-nodes">
+<h2>Troublesome nodes<a class="headerlink" href="#troublesome-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="forcefully-powering-down-a-node">
+<h3>Forcefully powering down a node<a class="headerlink" href="#forcefully-powering-down-a-node" title="Permalink to this headline">¶</a></h3>
+<p>If for some reason the operating system has hung, the nodes can still be
+forcefully powered off. There are 2 ways to achieve this, with a
+physical power switch, or using remote management.</p>
+<div class="section" id="remote-management">
+<h4>Remote Management<a class="headerlink" href="#remote-management" title="Permalink to this headline">¶</a></h4>
+<p>This can be done with ansible or direct ssh.</p>
+<ul>
+<li><p>Using ansible the command is</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span></code> <code class="docutils literal notranslate"><span class="pre">'mpcn&lt;node</span></code> <code class="docutils literal notranslate"><span class="pre">num&gt;*;'</span></code> <code class="docutils literal notranslate"><span class="pre">-m</span></code> <code class="docutils literal notranslate"><span class="pre">raw</span></code> <code class="docutils literal notranslate"><span class="pre">-a</span></code>
+<code class="docutils literal notranslate"><span class="pre">'power</span></code> <code class="docutils literal notranslate"><span class="pre">off</span></code> <code class="docutils literal notranslate"><span class="pre">hard'</span></code>
+For example: <code class="docutils literal notranslate"><span class="pre">ansible</span></code> <code class="docutils literal notranslate"><span class="pre">'mpcn42*;'</span></code> <code class="docutils literal notranslate"><span class="pre">-m</span></code> <code class="docutils literal notranslate"><span class="pre">raw</span></code> <code class="docutils literal notranslate"><span class="pre">-a</span></code>
+<code class="docutils literal notranslate"><span class="pre">'power</span></code> <code class="docutils literal notranslate"><span class="pre">off</span></code> <code class="docutils literal notranslate"><span class="pre">hard'</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Using ssh, simply ssh to the node and run ‘power off hard’. For
+example: <code class="docutils literal notranslate"><span class="pre">ssh</span></code> <code class="docutils literal notranslate"><span class="pre">admin&#64;mpcn42</span></code> <code class="docutils literal notranslate"><span class="pre">power</span></code> <code class="docutils literal notranslate"><span class="pre">off</span></code> <code class="docutils literal notranslate"><span class="pre">hard</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="physically">
+<h4>Physically<a class="headerlink" href="#physically" title="Permalink to this headline">¶</a></h4>
+<p>Locate the node that still has power by the light in front, and press
+and hold the power button until the power is off.</p>
+</div>
+</div>
+<div class="section" id="restoring-nodes-that-do-not-return-to-normal-operating-status">
+<h3>Restoring nodes that do not return to normal operating status<a class="headerlink" href="#restoring-nodes-that-do-not-return-to-normal-operating-status" title="Permalink to this headline">¶</a></h3>
+<p>Most of these operations will be done from a terminal on glauce, and the
+ansible setup from [onenote:Cluster.one Shutdown Plan] should have been
+run before beginning this.</p>
+<ol class="arabic">
+<li><p>Check that the node is powered on:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ansible</span> <span class="pre">'mpcn&lt;##&gt;;'</span> <span class="pre">-m</span> <span class="pre">raw</span> <span class="pre">-a</span> <span class="pre">power</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Check the node console for error messages:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">admin&#64;mpcn&lt;##&gt;</span></code></p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Run the command “vsp” which will show a serial console</p></li>
+<li><p>If there is no login prompt</p>
+<ol class="arabic simple">
+<li><p>Use the exit from the serial console, it should be on the
+screen ( ESC+( )</p></li>
+<li><p>Command: <code class="docutils literal notranslate"><span class="pre">power</span> <span class="pre">off</span> <span class="pre">hard</span></code></p></li>
+<li><p>Wait for the node power to go off, 2-5 minutes.</p></li>
+<li><p>Command: <code class="docutils literal notranslate"><span class="pre">power</span> <span class="pre">on</span></code></p></li>
+<li><p>Immediately type <code class="docutils literal notranslate"><span class="pre">vsp</span></code> and wait for the BIOS and boot messages
+to start scrolling by. This can take a while so be patient.</p></li>
+</ol>
+</li>
+<li><p>Else there is a login prompt so:</p>
+<ol class="arabic simple">
+<li><p>Login to the node as root</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">reboot</span></code> command</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>If the error condition can not be resolved, then notify the users
+group that a node is out, I’ll repair it when I get back.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Memorial University of Newfoundland
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

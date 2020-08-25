@@ -1,0 +1,18 @@
+How do I ...
+************
+
+.. toctree::
+
+   getatorngataccount
+   transferdatatoacenet
+   pickaparallelenvironment
+   matlab
+   submit
+   useimpi
+   e3d/e3d
+   unusual
+
+   impi/mpi-helloworld
+
+
+.. petsc

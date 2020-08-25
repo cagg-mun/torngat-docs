@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About &mdash; Torngat cluster  documentation</title>
+  <title>Paul S - Notes &mdash; Torngat cluster  documentation</title>
   
 
   
@@ -34,11 +34,9 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="author" title="About these documents" href="#" />
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How do I …" href="howdoi/index.html" />
-    <link rel="prev" title="Welcome to Torngat cluster documentation’s documentation!" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,8 +82,8 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howdoi/index.html">How do I …</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="howdoi/getatorngataccount.html">… get a Torngat account?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howdoi/transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
@@ -200,13 +198,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>About</li>
+      <li>Paul S - Notes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/about.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/notes.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -219,17 +217,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Computational Applied Geophysics Group</em> at Memorial University is a
-multi-disciplinary research group whose goals are to develop numerical
-modelling and high-performance computing techniques for all fields of applied
-geophysics.</p>
-<p>Please see <a class="reference external" href="http://www.esd.mun.ca/~farq/cagg.html">http://www.esd.mun.ca/~farq/cagg.html</a> for more information.</p>
-<p>A selection of current projects can be found at
-<a class="reference external" href="http://www.esd.mun.ca/~farq/cagg_research.html">http://www.esd.mun.ca/~farq/cagg_research.html</a>.</p>
-<p>A sister project, the Atlantic Collaborative Research Group in Numerical
-Analysis and Scientific Computing, can be found <a class="reference external" href="http://www.math.mun.ca/anasc/">http://www.math.mun.ca/anasc/</a>.</p>
+  <div class="section" id="paul-s-notes">
+<h1>Paul S - Notes<a class="headerlink" href="#paul-s-notes" title="Permalink to this headline">¶</a></h1>
+<table class="table-striped docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 2%" />
+<col style="width: 9%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Updated</p></th>
+<th class="head"><p>State</p></th>
+<th class="head"><p>Task</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2012-05-24 09:39</p></td>
+<td><p>0%</p></td>
+<td><p>Migrate data from scratch partition
+to archive partitions</p></td>
+<td><ul class="simple">
+<li><p>Torngat Scratch partition is on fast disk, once data is analyzed,
+can be moved to the slower disks, the archive partitions.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2012-05-24 09:39</p></td>
+<td><p>0%</p></td>
+<td><p>SGE upgrade</p></td>
+<td><ul class="simple">
+<li><p>version not lagging by much, but may fix bugs</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>2013-07-3 16:14</p></td>
+<td><p>0%</p></td>
+<td><p>MATLAB upgrade</p></td>
+<td><ul class="simple">
+<li><p>Will certainly see benefit when GPUs are installed. The MATLAB currently licensed has components that will use GPU if installed and configured</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2013-07-3 16:18</p></td>
+<td><p>0%</p></td>
+<td><p>Reporting/usage</p></td>
+<td><ul class="simple">
+<li><p>Presentation given about this at ISC13. Systems are so unique that homegrown reporting is common. The most commonly used system for reporting is rrdtool. Has some disadvantages related to timing of input data. An up and coming tool “graphite” was suggested. Will allow the data, once in the system, to be queried and live graphed.</p></li>
+<li><p>Setup a VM on glauce for this.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><a href="#id2"><span class="problematic" id="id3">`Reference to the fixed CSS for syntax highlights`_</span></a></p></li>
+<li><p><a class="reference external" href="MPI_Communicatoins">MPI Communicatoins</a></p></li>
+</ul>
+<table class="table table-striped docutils align-default" id="id1">
+<caption><span class="caption-text">Current State</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Row 1 col 1</p></td>
+<td><p>Row 1 col 2</p></td>
+<td><p>Row 1 col 3</p></td>
+<td><p>row 1 col 4</p></td>
+</tr>
+<tr class="row-even"><td><p>next row</p></td>
+<td><p>still next row, but with a much longer cell to see what the wrapping will do, if anything.</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
@@ -237,15 +303,6 @@ Analysis and Scientific Computing, can be found <a class="reference external" hr
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="howdoi/index.html" class="btn btn-neutral float-right" title="How do I …" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Torngat cluster documentation’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

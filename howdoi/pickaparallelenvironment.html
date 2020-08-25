@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>… pick a parallel environment &mdash; Torngat cluster  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="… run MATLAB" href="matlab.html" />
+    <link rel="prev" title="… transfer data to/from ACE-net" href="transferdatatoacenet.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Torngat cluster
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How do I …</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getatorngataccount.html">… get a Torngat account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transferdatatoacenet.html#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transferdatatoacenet.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">… pick a parallel environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pe-configuration">PE Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#torngat-pes">Torngat PEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matlab.html">… run MATLAB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html#accessing-a-matlab-node">Accessing a MATLAB node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matlab.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matlab.html#access-instructions">Access instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matlab.html#parallel-computing-in-matlab">Parallel computing in MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="submit.html">… submit a job on Torngat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="useimpi.html">… run Intel MPI programs on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="impi/1selectmpi.html">Select MPI version</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/1selectmpi.html#use-the-mpi-selector-facility-to-set-the-mpi-version-to-intel-mpi">Use the mpi selector facility to set the MPI version to Intel MPI.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/2compile.html">Use the mpi compiler to compile the MPI program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/2compile.html#see-sample-program">See Sample program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-c-program">Compile C program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-c-c-program">Compile C/C++ program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="impi/2compile.html#compile-fortran-program">Compile Fortran program:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="impi/2compile.html#switches-on-the-command-line-are-passed-to-the-underlying-compiler">Switches on the command line are passed to the underlying compiler.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/3submit.html">To run a program in the Intel MPI environment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/3submit.html#create-a-script-file-describing-the-job">Create a script file describing the job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/4monitor.html">Monitoring Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-your-jobs">To show your jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-all-jobs">To show all jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-show-all-queues">To show all queues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="impi/4monitor.html#to-delete-abort-a-job">To delete (abort) a job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="impi/5output.html">Get the output from the completed job.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impi/6sample.html">Sample Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="e3d/e3d.html">… run E3d on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="e3d/e3d.html#how-to-run-e3d-on-torngat">How to run E3d on Torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unusual.html">… run unusual code on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#the-code">“The Code”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unusual.html#how-to-run-it-on-torngat">How to run it on torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="impi/mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Torngat cluster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">How do I …</a> &raquo;</li>
+        
+      <li>… pick a parallel environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howdoi/pickaparallelenvironment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pick-a-parallel-environment">
+<h1>… pick a parallel environment<a class="headerlink" href="#pick-a-parallel-environment" title="Permalink to this headline">¶</a></h1>
+<p>Torngat has a number of Parallel Environments, the correct one will be
+determined by the job requirements. To understand the parallel
+environments, here is a definition of the configuration options, as well
+as the PEs available on torngat</p>
+<div class="section" id="pe-configuration">
+<span id="id1"></span><h2>PE Configuration<a class="headerlink" href="#pe-configuration" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pe_name</dt><dd><p>A label for the environment, must be defined in GE to be used</p>
+</dd>
+<dt>slots</dt><dd><p>Total number of CPU slots available to the environment. On torngat
+each node has 12 slots, which essentially are the number of cores
+available on each node. Torngat has a maximum of 504 slots</p>
+</dd>
+<dt>user_lists &amp; xuser_lists</dt><dd><p>Permissions for the PE, not currently used on torngat</p>
+</dd>
+<dt>start_proc_args</dt><dd><p>A list of commands to run before starting a job with the defined PE.
+This is commonly /bin/true or NONE, both of which do nothing for the
+job. There are some special variables which can be used.</p>
+</dd>
+<dt>stop_proc_args</dt><dd><p>As with the start arguments, this command/script will run after the
+job has stopped.</p>
+</dd>
+<dt>allocation_rule</dt><dd><p>Currently the most important setting available, this controls the
+mechanism used to allocate (CPU)-slots are allocated to the job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">integer value</dt>
+<dd class="field-odd"><p>For an integer value, the number of slots/host is defined and
+must be exactly the number.</p>
+</dd>
+<dt class="field-even">$fill_up</dt>
+<dd class="field-even"><p>allocates slots on a host until no more slots remain on the
+host, then “fills up” another host</p>
+</dd>
+<dt class="field-odd">$round_robin</dt>
+<dd class="field-odd"><p>allocates slots a host at a time, each slot is allocated on a
+new host until all hosts are used, then slots are allocated
+again on hosts with available slots</p>
+</dd>
+</dl>
+</dd>
+<dt>control_slaves</dt><dd><p>This defines whether the processes controlled by the grid engine
+process. Generally this is FALSE</p>
+</dd>
+<dt>job_is_first_task</dt><dd><p>Only used if control_slaves is TRUE</p>
+</dd>
+<dt>urgency_slots</dt><dd><p>Used when a range of slots is specified</p>
+</dd>
+</dl>
+<p>This information has been compiled from the Grid Engine manual, more
+details can be found at the man page sge_pe(5)</p>
+</div>
+<div class="section" id="torngat-pes">
+<h2>Torngat PEs<a class="headerlink" href="#torngat-pes" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>12per</dt><dd><p>This environment is configured to use all 12 processor cores on a
+node. If there is no node on which all 12 cores are available, the
+job will be queued. The number of requested slots for this
+environment must be a multiple of 12. For example, if 48 slots are
+requested, 4 nodes must be unoccupied for the job to begin
+execution, and the 4 nodes are completely allocated to the running
+job.</p>
+</dd>
+<dt>1per</dt><dd><p>Each host can only have one slot allocated to the requesting job.
+The maximum number of slots available equals the number of hosts
+with available slots</p>
+</dd>
+<dt>impi</dt><dd><p>Probably the best general use PE, allocates all slots on a node
+until the node is full (see $fill_up above)</p>
+<p>Currently when using impi, an execution host file must be built, to
+build the file insert the following into the job submission script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># make host file</span>
+MakeMachineFile<span class="o">()</span>
+<span class="o">{</span>
+    cat <span class="nv">$1</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span>
+       <span class="nv">host</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span><span class="p">|</span>cut -f1 -d<span class="s2">&quot; &quot;</span><span class="p">|</span>cut -f1 -d<span class="s2">&quot;.&quot;</span><span class="sb">`</span>
+       <span class="nv">nprocs</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span><span class="p">|</span>cut -f2 -d<span class="s2">&quot; &quot;</span><span class="sb">`</span>
+       <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$nprocs</span><span class="s2">&quot;</span>
+    <span class="k">done</span>
+<span class="o">}</span>
+MakeMachineFile <span class="nv">$PE_HOSTFILE</span> &gt;machines.<span class="nv">$JOB_ID</span>
+</pre></div>
+</div>
+</dd>
+<dt>ompi</dt><dd><p>A copy of impi</p>
+</dd>
+<dt>make</dt><dd><p>Does $round_robin slot allocation</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matlab.html" class="btn btn-neutral float-right" title="… run MATLAB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transferdatatoacenet.html" class="btn btn-neutral float-left" title="… transfer data to/from ACE-net" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Memorial University of Newfoundland
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

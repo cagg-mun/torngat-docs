@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>To run a program in the Intel MPI environment: &mdash; Torngat cluster  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Monitoring Jobs" href="4monitor.html" />
+    <link rel="prev" title="Use the mpi compiler to compile the MPI program" href="2compile.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Torngat cluster
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">How do I …</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getatorngataccount.html">… get a Torngat account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transferdatatoacenet.html">… transfer data to/from ACE-net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transferdatatoacenet.html#tips">Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../transferdatatoacenet.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pickaparallelenvironment.html">… pick a parallel environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pickaparallelenvironment.html#pe-configuration">PE Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pickaparallelenvironment.html#torngat-pes">Torngat PEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matlab.html">… run MATLAB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matlab.html#accessing-a-matlab-node">Accessing a MATLAB node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matlab.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matlab.html#access-instructions">Access instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../matlab.html#parallel-computing-in-matlab">Parallel computing in MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../submit.html">… submit a job on Torngat</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../useimpi.html">… run Intel MPI programs on Torngat</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1selectmpi.html">Select MPI version</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1selectmpi.html#use-the-mpi-selector-facility-to-set-the-mpi-version-to-intel-mpi">Use the mpi selector facility to set the MPI version to Intel MPI.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="2compile.html">Use the mpi compiler to compile the MPI program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="2compile.html#see-sample-program">See Sample program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="2compile.html#compile-c-program">Compile C program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="2compile.html#compile-c-c-program">Compile C/C++ program:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="2compile.html#compile-fortran-program">Compile Fortran program:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="2compile.html#switches-on-the-command-line-are-passed-to-the-underlying-compiler">Switches on the command line are passed to the underlying compiler.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">To run a program in the Intel MPI environment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-script-file-describing-the-job">Create a script file describing the job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="4monitor.html">Monitoring Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="4monitor.html#to-show-your-jobs">To show your jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4monitor.html#to-show-all-jobs">To show all jobs:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4monitor.html#to-show-all-queues">To show all queues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4monitor.html#to-delete-abort-a-job">To delete (abort) a job:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="5output.html">Get the output from the completed job.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6sample.html">Sample Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../e3d/e3d.html">… run E3d on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../e3d/e3d.html#how-to-run-e3d-on-torngat">How to run E3d on Torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../unusual.html">… run unusual code on Torngat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../unusual.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../unusual.html#the-code">“The Code”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../unusual.html#how-to-run-it-on-torngat">How to run it on torngat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mpi-helloworld.html">MPI Communications</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Torngat cluster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">How do I …</a> &raquo;</li>
+        
+          <li><a href="../useimpi.html">… run Intel MPI programs on Torngat</a> &raquo;</li>
+        
+      <li>To run a program in the Intel MPI environment:</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/howdoi/impi/3submit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="to-run-a-program-in-the-intel-mpi-environment">
+<h1>To run a program in the Intel MPI environment:<a class="headerlink" href="#to-run-a-program-in-the-intel-mpi-environment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-a-script-file-describing-the-job">
+<h2>Create a script file describing the job:<a class="headerlink" href="#create-a-script-file-describing-the-job" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">#$ -cwd</span>
+ <span class="c1">#$ -N hello</span>
+ <span class="c1">#$ -o hello.output -j y</span>
+ <span class="c1">#$ -pe impi 32</span>
+ <span class="c1">#$ -q all.q</span>
+ <span class="c1">#$ -V</span>
+
+ MakeMachineFile<span class="o">()</span>
+ <span class="o">{</span>
+   cat <span class="nv">$1</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span>
+      <span class="nv">host</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span><span class="p">|</span>cut -f1 -d<span class="s2">&quot; &quot;</span><span class="p">|</span>cut -f1 -d<span class="s2">&quot;.&quot;</span><span class="sb">`</span>
+      <span class="nv">nprocs</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span><span class="p">|</span>cut -f2 -d<span class="s2">&quot; &quot;</span><span class="sb">`</span>
+      <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$nprocs</span><span class="s2">&quot;</span>
+   <span class="k">done</span>
+ <span class="o">}</span>
+ MakeMachineFile <span class="nv">$PE_HOSTFILE</span> &gt;machines.<span class="nv">$JOB_ID</span>
+
+ mpiexec.hydra --machinefile<span class="o">=</span>machines.<span class="nv">$JOB_ID</span> /home/gblades/hello
+
+ rm machines.<span class="nv">$JOB_ID</span>
+</pre></div>
+</td></tr></table></div>
+<p>( sample file: /home/gblades/wiki/hello.ge ) The directives section
+specifies the computing environment and resources that are needed to do
+the job. Each directive starts with <code class="docutils literal notranslate"><span class="pre">#$</span></code>. The must be no space before the
+<code class="docutils literal notranslate"><span class="pre">#$</span></code> but there is a space after.</p>
+<p>We specify that we want to execute the commands in the current directory
+with the -cwd directive:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -cwd</span>
+</pre></div>
+</div>
+<p>We specify the name of the job with the -N directive:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -N hello</span>
+</pre></div>
+</div>
+<p>We specify a file for the program to write its output to and we merge
+the standard output and standard error into one stream:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -o hello.output -j y</span>
+</pre></div>
+</div>
+<p>We are going to run the program in a parallel environment. We will
+distribute out program over 32 cores. The parallel environment directive
+looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -pe impi 32</span>
+</pre></div>
+</div>
+<p>We specify the job queue:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l qname=all.q</span>
+</pre></div>
+</div>
+<p>We specify that the job have the same environemnt variables as the shell
+in which the job was submitted:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -V</span>
+</pre></div>
+</div>
+<p>Submit the job:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub hello.ge
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="4monitor.html" class="btn btn-neutral float-right" title="Monitoring Jobs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2compile.html" class="btn btn-neutral float-left" title="Use the mpi compiler to compile the MPI program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Memorial University of Newfoundland
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
